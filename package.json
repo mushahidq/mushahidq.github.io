@@ -2,10 +2,13 @@
   "name": "mushahidq-portfolio",
   "version": "1.0.0",
   "description": "Mohammed Mushahid Qureshi's web portfolio.",
+  "homepage": "https://mushahidq.github.io/",
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.2.0",
