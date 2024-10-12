@@ -1,0 +1,480 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: rgb(23 23 23/1);
+  --color-text-main: #f1f1e6; /* #eeedff; rgb(249 248 255/1); */
+  --color-primary: #7b88f2;
+  --wrapper-height: 85vh;
+  --image-max-width: 320px;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Navigation grid */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.25rem auto 0;
+  padding: 0.25rem 0 0 0;
+  width: 100%;
+  flex-wrap: wrap;
+  /*border-bottom: 4px solid #ffffff;*/
+}
+
+.header a {
+  font-family: "Lora", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  text-decoration: none;
+  border-style: none;
+}
+
+.header a:hover {
+  color: var(--color-primary);
+}
+
+.header .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+
+/*Home*/
+.home a {
+  font-family: "Lora", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #f9f8ff;
+  text-decoration: underline;
+  border-style: none;
+}
+
+.home a:hover {
+  color: var(--color-primary);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 0;
+  padding: 0.25rem 0 1rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  /*border-bottom: 4px solid #ffffff;*/
+}
+
+.footer .social-icons {
+  margin: 0.25rem;
+  margin-bottom: 0.1rem;
+}
+
+.footer a.social-icons {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+/* Page structure */
+
+body {
+  font-family: "Lora", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  scrollbar-color: rgb(249 248 255/0.5) rgb(249 248 255/1);
+}
+
+.page {
+  max-width: 70vw;
+}
+
+/*.content .page .page-content {
+  background: rgb(249 248 255/0.1);
+  margin: 0px;
+  padding: 0.75rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+} */
+
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+  min-height: 86vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.content div {
+  margin: 0.75rem;
+}
+/* Page titles */
+h1 {
+  color: var(--color-text-main);
+  font-family: "Lora", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 105%;
+}
+
+.page h1 {
+  font-size: 48px;
+  padding: 0.5rem;
+  border-bottom: 4px solid rgb(249 248 255/0.1);
+  margin-bottom: 0px;
+}
+
+.page p {
+  line-height: 1.5;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/*.page p .imp{
+  color: var(--color-primary);
+}*/
+
+.page a {
+  color: #f9f8ff;
+  text-decoration: underline;
+}
+.page a:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+/* The React image and "click me" text */
+.btn--click-me {
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn--click-me:hover {
+  text-decoration: underline;
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+.instructions p {
+  font-size: 1rem;
+}
+h2 {
+  color: var(--color-text-main);
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Move astronaut */
+@-moz-keyframes move-astronaut-0 {
+  100% {
+    -moz-transform: translate(-500px, -500px);
+  }
+}
+@-webkit-keyframes move-astronaut-0 {
+  100% {
+    -webkit-transform: translate(-500px, -500px);
+  }
+}
+@keyframes move-astronaut-0 {
+  100% {
+    -webkit-transform: translate(-500px, -500px);
+    transform: translate(-500px, -500px);
+  }
+}
+
+@-moz-keyframes move-astronaut-1 {
+  100% {
+    -moz-transform: translate(-500px, 500px);
+  }
+}
+@-webkit-keyframes move-astronaut-1 {
+  100% {
+    -moz-transform: translate(-500px, 500px);
+  }
+}
+@keyframes move-astronaut-1 {
+  100% {
+    -webkit-transform: translate(-500px, 500px);
+    transform: translate(-500px, 500px);
+  }
+}
+
+@-moz-keyframes move-astronaut-2 {
+  100% {
+    -moz-transform: translate(500px, 500px);
+  }
+}
+@-webkit-keyframes move-astronaut-2 {
+  100% {
+    -webkit-transform: translate(500px, 500px);
+  }
+}
+@keyframes move-astronaut-2 {
+  100% {
+    -webkit-transform: translate(500px, 500px);
+    transform: translate(500px, 500px);
+  }
+}
+
+@-moz-keyframes move-astronaut-3 {
+  100% {
+    -moz-transform: translate(-500px, 500px);
+  }
+}
+@-webkit-keyframes move-astronaut-3 {
+  100% {
+    -webkit-transform: translate(-500px, 500px);
+  }
+}
+@keyframes move-astronaut-3 {
+  100% {
+    -webkit-transform: translate(-500px, 500px);
+    transform: translate(-500px, 500px);
+  }
+}
+@-moz-keyframes rotate-astronaut {
+  100% {
+    -moz-transform: rotate(-720deg);
+  }
+}
+@-webkit-keyframes rotate-astronaut {
+  100% {
+    -webkit-transform: rotate(-720deg);
+  }
+}
+@keyframes rotate-astronaut {
+  100% {
+    -webkit-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+}
+
+.object_astronaut {
+  animation: rotate-astronaut 200s infinite linear both alternate;
+}
+
+.box_astronaut {
+  z-index: 110 !important;
+  will-change: transform;
+}
+
+.box_astronaut_time_0 {
+  animation: none 5s infinite linear both alternate;
+}
+
+.box_astronaut_time_1 {
+  animation: none 11s infinite linear both alternate;
+}
+
+.box_astronaut_time_2 {
+  animation: none 24s infinite linear both alternate;
+}
+
+.box_astronaut_time_3 {
+  animation: none 30s infinite linear both alternate;
+}
+
+.box_astronaut_anim_0 {
+  animation-name: move-astronaut-0;
+}
+
+.box_astronaut_anim_1 {
+  animation-name: move-astronaut-1;
+}
+
+.box_astronaut_anim_2 {
+  animation-name: move-astronaut-2;
+}
+
+.box_astronaut_anim_3 {
+  animation-name: move-astronaut-3;
+}
+
+.box_astronaut_stat {
+  display: block;
+  cursor: pointer;
+}
+
+/*Projects*/
+.projects {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project {
+  margin: 0.1rem;
+  width: 47%;
+  border: 4px solid rgb(249 248 255/0.1);
+}
+
+.project img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project div {
+  margin: 1rem;
+}
+
+/*.project div p{
+  text-align: justify;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}*/
+
+.project div p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-align: left;
+}
+
+.page .lrn-button {
+  text-decoration: none;
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  color: var(--color-primary);
+
+  background-color: rgb(249 248 255/0);
+  transition: 0.3s;
+  position: relative;
+}
+
+.page .lrn-button:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--color-primary);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.page .lrn-button:hover {
+  color: var(--color-text-main);
+  padding-bottom: 0.25rem;
+  text-decoration: none;
+}
+
+.page .lrn-button:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.page .social-links {
+  text-align: center;
+  padding: 0.25rem;
+}
+
+.page .social-links a {
+  margin: 0.75rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  background: var(--color-text-main);
+  border-radius: 4px;
+  color: var(--color-primary);
+}
+
+.page .social-links img {
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: sub;
+}
+
+.page .social-links a:hover {
+  margin: 0.75rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  background: var(--color-primary);
+  border-radius: 4px;
+  color: var(--color-text-main);
+}
+
+/* Media Queries for Mobile Devices */
+
+/*Mobile Query*/
+@media only screen and (max-width: 480px) {
+  .page {
+    max-width: 90vw;
+  }
+
+  .project {
+    margin: 0.1rem;
+    width: 100%;
+    border: 4px solid rgb(249 248 255/0.1);
+  }
+  
+  .page h1 {
+    font-size: 40px;
+  }
+}
