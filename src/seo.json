@@ -3,5 +3,5 @@
   "title":   "Mohammed Mushahid Qureshi",
   "description": "Portfolio for Mohammed Mushahid Qureshi",
   "url": "glitch-default",
-  "image": "astro-favicon.avif"
+  "image": "/assets/astro-favicon.avif"
 }

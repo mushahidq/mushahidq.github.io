@@ -40,7 +40,7 @@ export default function Home() {
           <div className={astronaut}>
             <img
               className="object_astronaut"
-              src="/astronaut.svg"
+              src="/assets/astronaut.svg"
               width="140px"
               onClick={handleAstronaut}
               alt="Atronaut illustration"

@@ -5,42 +5,42 @@
       "description": "A fully-functional honeypot for an in-house cryptocurreny exchange platform. The idea of this project was to make something that was both challenging as well as something that could be used for educational purposes later on. The honeypot consists of three security levels (least to most secure) and supports a variety of attacks including but not limited to SQL Injections, XSS, IDORs, PrivEsc, and more.",
       "technologies": "PHP, HTML5, CSS3, JavaScript, Bootstrap, MySQL",
       "link": "https://github.com/adityapanchal10/crypto-pot",
-      "img": "cryptopot.png"
+      "img": "/assets/cryptopot.png"
     },
     {
       "name": "CHIP-8 Emulator",
       "description": "A small emulator for the CHIP-8 interpreter language. This implementation uses C++ for the core functionality and a SDL2 backend completes the emulator with sound, keyboard input and GL display.",
       "technologies": "C++, SDL2",
       "link": "https://github.com/adityapanchal10/chip8",
-      "img": "/chip8.jpg"
+      "img": "/assets/chip8.jpg"
     },
     {
       "name": "File Cabinet",
       "description": "A multi-user web application to store text documents made using Ruby on Rails, Haml, and SCSS. It allows users to store and edit text files with the ability to add, edit and delete documents on the server. Implemented using MVC architecture with support for user authentication.",
       "technologies": "Ruby, Rails, HAML, SCSS",
       "link": "https://github.com/mushahidq/ror_fileCabinet",
-      "img": "/doc.avif"
+      "img": "/assets/doc.avif"
     },
     {
       "name": "C++ Keylogger",
       "description": "A simple keylogger for windows created in C++",
       "technologies": "C++",
       "link": "https://github.com/mushahidq/cpp_win_keylogger",
-      "img": "/keylogger.jpg"
+      "img": "/assets/keylogger.jpg"
     },
     {
       "name": "Image Color Extractor",
       "description": "Identify most used colours in a image using python, flask, scikit and opencv",
       "technologies": "python, flask, scikit, opencv",
       "link": "https://github.com/mushahidq/py_colour_identifier",
-      "img": "/color-picker.png"
+      "img": "/assets/color-picker.png"
     },
     {
       "name": "Rubber Ducky",
       "description": "A raspberry pi pico rubber ducky device that can be used to play pranks or be used as a hacking tool.",
       "technologies": "python, circuitpython, adafruit_usb_hid, Raspberry Pi Pico,",
       "link": "https://github.com/mushahidq/pico-rick-roll",
-      "img": "rd.png"
+      "img": "/assets/rd.png"
     }
   ],
   "projects_2": [
