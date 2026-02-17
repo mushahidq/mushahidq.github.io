@@ -9,8 +9,7 @@ export default function About() {
       <div className="page-content">
         <p>
           <b>
-            Driven and dedicated Software Engineer with a solid foundation in
-            full-stack development, cybersecurity, and enterprise applications.
+            Master of Science (Computer Science) student at University of Calgary with software engineering experience of over 3 years and a solid foundation in full-stack development, information security, and enterprise applications.
           </b>
         </p>
         <p>
@@ -21,7 +20,7 @@ export default function About() {
           </em>
         </p>
         <p>
-          My journey in technology began with a{" "}
+          I have been experimenting with computers ever since my family got our first computer and have broken my fair share of devices. I got my {" "}
           <b class="imp">
             Bachelor of Engineering in Computer Science and Engineering
           </b>{" "}
@@ -30,13 +29,12 @@ export default function About() {
           management.
         </p>
         <p>
-          Currently, I am working at <b class="imp">Oracle</b> in Gandhinagar,
-          where I specialize in the Logistics application spanning Inventory,
+          I worked as an Applications Engineer at <b class="imp">Oracle</b> in Gandhinagar,
+          where I specialized in the Logistics application spanning Inventory,
           Shipping and Receiving modules in Supply Chain Management within the
-          Fusion Apps (SaaS) platform. My role involves triaging customer
-          issues, resolving bugs, and collaborating with cross-functional teams
+          Fusion Apps (SaaS) platform. My role involved product development, triaging customer issues, resolving bugs, and collaborating with cross-functional teams
           to ensure optimal product performance. My technical expertise in Java,
-          ADF, and various web technologies allows me to provide effective and
+          ADF, and various web technologies allowed me to provide effective and
           scalable solutions for complex problems.
         </p>
         <p>

@@ -27,9 +27,11 @@ export default function Home() {
     <>
       <div className="page home">
         <h1 className="title">Hello, I am Mushahid</h1>
-        <h2>Applications Engineer @ Oracle</h2>
+        <h2>Master's student at Universtity of Calgary</h2>
         <p>
           Cybersecurity and IoT enthusiast, Gaming connoisseur
+          <br />
+          Formerly, Applications Engineer @ Oracle
           <br />
           Check out my <Link href="/projects">projects</Link> or read more{" "}
           <Link href="/about">about me</Link>
